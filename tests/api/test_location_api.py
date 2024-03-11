@@ -8,9 +8,13 @@ from jsonschema import validate
 from lamoda_tests.utils.schemas_path import load_schema
 
 
-@allure.tag('api')
-@allure.label('layer', 'API')
-@allure.label('owner', 'nsafonov')
+@allure.epic('API. Choose location')
+@allure.label("owner", "nsafonov")
+@allure.feature("Check of choosen location")
+@allure.label('microservice', 'API')
+@allure.tag('regress', 'api', 'normal')
+@allure.label('layer', 'api')
+@allure.severity('normal')
 @allure.story('Выбор локации')
 def test_location(base_url, header):
     with step("Выбор локации"):

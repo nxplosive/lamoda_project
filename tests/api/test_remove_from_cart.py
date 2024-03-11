@@ -3,13 +3,20 @@ import json
 import allure
 import requests
 from allure_commons._allure import step
+from jsonschema import validate
+
+from lamoda_tests.utils.schemas_path import load_schema
 
 
-@allure.tag('api')
-@allure.label('layer', 'API')
-@allure.label('owner', 'nsafonov')
+@allure.epic('API. Remove item from cart')
+@allure.label("owner", "nsafonov")
+@allure.feature("Checking that an item has been removed from cart")
+@allure.label('microservice', 'API')
+@allure.tag('regress', 'api', 'normal')
+@allure.label('layer', 'api')
+@allure.severity('normal')
 @allure.story('Удаление товара из корзины')
-def test_cart_item(base_url):
+def test_remove_item(base_url):
     with step("Удаление товара из корзины"):
         url = f'{base_url}cart/remove'
     payload = json.dumps({
@@ -38,9 +45,15 @@ def test_cart_item(base_url):
         'sec-ch-ua-platform': '"Windows"',
         'sec-gpc': '1'
     }
-
     response = requests.request("POST", url, headers=headers, data=payload)
+    body = response.json()
     with allure.step('Статус код = 200'):
         assert response.status_code == 200
+
+    schema = load_schema('item_remove.json')
+    with open(schema) as file:
+        schema = json.load(file)
+    validate(body, schema=schema)
+
     assert response.json()["total_quantity"] == 0
     assert response.json()["total_price"] == 0

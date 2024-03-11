@@ -3,11 +3,18 @@ import json
 import allure
 import requests
 from allure_commons._allure import step
+from jsonschema import validate
+
+from lamoda_tests.utils.schemas_path import load_schema
 
 
-@allure.tag('api')
-@allure.label('layer', 'API')
-@allure.label('owner', 'nsafonov')
+@allure.epic('API. Add item to cart')
+@allure.label("owner", "nsafonov")
+@allure.feature("Checking add item to cart")
+@allure.label('microservice', 'API')
+@allure.tag('regress', 'api', 'normal')
+@allure.label('layer', 'api')
+@allure.severity('normal')
 @allure.story('Добавление товара в корзину')
 def test_cart_item(base_url):
     with step("Добавление товара в корзину"):
@@ -39,7 +46,14 @@ def test_cart_item(base_url):
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
+    body = response.json()
     with allure.step('Статус код = 200'):
         assert response.status_code == 200
+
+    schema = load_schema('item_add.json')
+    with open(schema) as file:
+        schema = json.load(file)
+    validate(body, schema=schema)
+
     assert response.json()["total_quantity"] == 1
     assert response.json()["total_price"] == price

@@ -53,9 +53,9 @@ def test_authorization_registered_user(base_url):
 @allure.tag('regress', 'api', 'normal')
 @allure.label('layer', 'api')
 @allure.severity('normal')
-@allure.story('Неуспешная авторизация')
+@allure.story('Безуспешная авторизация')
 def test_failed_authorization(base_url, header):
-    with allure.step('Неуспешная авторизация'):
+    with allure.step('Безуспешная авторизация'):
         url = f"{base_url}customer/auth"
     response = requests.request("POST", url, json={"login": user_email, "password": invalid_password}, headers=header)
     body = response.json()
