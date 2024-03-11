@@ -1,9 +1,9 @@
 import json
+
 import allure
 import requests
 from jsonschema import validate
 
-from lamoda_tests.utils.api_requests import api_post
 from lamoda_tests.utils.schemas_path import load_schema
 from tests.api.conftest import user_email, user_password, invalid_password, header
 
