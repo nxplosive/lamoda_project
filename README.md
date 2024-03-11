@@ -101,7 +101,7 @@ allure serve tests\allure-results
 ![allure_report_overview](pictures/readme_files/AllRep1.png)
 
 #### Результаты прохождения теста
-![allure_reports_behaviors](pictures/readme_files/AllRep3.png)
+![allure_reports_behaviors](pictures/readme_files/Allrep3.png)
 
 #### Диаграммы
 
