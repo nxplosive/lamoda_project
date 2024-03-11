@@ -126,6 +126,11 @@ allure serve tests\allure-results
 
 ---
 
+### Интеграция с Jira
+> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1162">Ссылка на проект в Jira</a>
+![jira_integration](pictures/readme_files/Jira.png)
+---
+
 ### Примеры выполнения тестов
 
 <img src="pictures/readme_files/test_add_to_cart.gif" width="700"/>  
