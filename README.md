@@ -110,7 +110,7 @@ allure serve tests\allure-results
 ----
 
 ### Интеграция с Allure TestOps
-> <a target="_blank" href="https://allure.autotests.cloud/launch/36965">Ссылка на проект</a>
+> <a target="_blank" href="https://allure.autotests.cloud/launch/37007">Ссылка на проект</a>
 
 #### Общий Дашборд
 
