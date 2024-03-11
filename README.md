@@ -98,31 +98,31 @@ allure serve tests\allure-results
 ----
 
 #### Общие результаты 
-![allure_report_overview](pictures/allure_report_overview.png)
+![allure_report_overview](pictures/readme_files/AllRep1.png)
 
 #### Результаты прохождения теста
-![allure_reports_behaviors](pictures/allure_reports_behaviors.png)
+![allure_reports_behaviors](pictures/readme_files/AllRep3.png)
 
 #### Диаграммы
 
-![allure_reports_graphs](pictures/alluere_reports_graphs_1.png)
+![allure_reports_graphs](pictures/readme_files/AllRep2.png)
 
 ----
 
 ### Интеграция с Allure TestOps
-> <a target="_blank" href="https://allure.autotests.cloud/project/4117/dashboards">Ссылка на проект</a>
+> <a target="_blank" href="https://allure.autotests.cloud/launch/36965">Ссылка на проект</a>
 
 #### Общий Дашборд
 
-![allure_test_ops_dashboards](pictures/allure_testops_launches.png)
+![allure_test_ops_dashboards](pictures/readme_files/AllTO1.png)
 
 #### История запуска тестов
 
-![allure_testops_launches](pictures/allure_testops_dashboards.png)
+![allure_testops_launches](pictures/readme_files/AllTO2.png)
 
 #### Тест кейсы
 
-![allure_testops_suites](pictures/allure_testops_suites.png)
+![allure_testops_suites](pictures/readme_files/AllTO3.png)
 
 ---
 
