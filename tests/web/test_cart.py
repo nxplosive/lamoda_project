@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from lamoda_tests.data.data_cards import card
@@ -13,6 +14,13 @@ def pre_add_to_cart():
     return main_page
 
 
+@allure.epic('Add item to cart')
+@allure.label("owner", "nsafonov")
+@allure.feature("Checking whether an item has been added to cart")
+@allure.label('microservice', 'WEB')
+@allure.tag('regress', 'ui', 'normal')
+@allure.severity('normal')
+@allure.label('layer', 'ui')
 def test_add_to_cart():
     main_page = MainPage()
 
@@ -22,6 +30,13 @@ def test_add_to_cart():
     main_page.check_cart(card.card_name, card.brand_name, card.item_name)
 
 
+@allure.epic('Remove item from cart')
+@allure.label("owner", "nsafonov")
+@allure.feature("Checking whether an item has been removed")
+@allure.label('microservice', 'WEB')
+@allure.tag('regress', 'ui', 'normal')
+@allure.severity('normal')
+@allure.label('layer', 'ui')
 def test_remove_from_cart(pre_add_to_cart):
     main_page = pre_add_to_cart
     main_page.remove_from_cart()
