@@ -1,0 +1,653 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "is_available": {
+          "type": "boolean"
+        },
+        "priority": {
+          "type": "integer"
+        },
+        "service_levels": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            }
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "warnings": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "is_available",
+        "priority",
+        "service_levels",
+        "title",
+        "type",
+        "warnings"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "is_available": {
+          "type": "boolean"
+        },
+        "priority": {
+          "type": "integer"
+        },
+        "service_levels": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "delivery_date_max": {
+                  "type": "string"
+                },
+                "delivery_date_min": {
+                  "type": "string"
+                },
+                "delivery_price": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "has_intervals": {
+                  "type": "boolean"
+                },
+                "has_upselling": {
+                  "type": "boolean"
+                },
+                "interval_duration": {
+                  "type": "string"
+                },
+                "interval_price_range": {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer"
+                    },
+                    "min": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "max",
+                    "min"
+                  ]
+                },
+                "is_bankcard_accepted": {
+                  "type": "boolean"
+                },
+                "is_lme": {
+                  "type": "boolean"
+                },
+                "is_tryon_allowed": {
+                  "type": "boolean"
+                },
+                "method_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "tryon_limit_from": {
+                  "type": "integer"
+                },
+                "tryon_limit_to": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "code",
+                "delivery_date_max",
+                "delivery_date_min",
+                "delivery_price",
+                "description",
+                "has_intervals",
+                "has_upselling",
+                "interval_duration",
+                "interval_price_range",
+                "is_bankcard_accepted",
+                "is_lme",
+                "is_tryon_allowed",
+                "method_code",
+                "title",
+                "tryon_limit_from",
+                "tryon_limit_to"
+              ]
+            }
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "warnings": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "is_available",
+        "priority",
+        "service_levels",
+        "title",
+        "type",
+        "warnings"
+      ]
+    }
+  ]
+}
