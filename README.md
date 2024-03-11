@@ -1,119 +1,91 @@
-# Проект по тестированию сайта банка "ВТБ"
-> <a target="_blank" href="https://vtb.ru/">VTB bank</a>
+<h1 align="center">Проект по тестированию интернет-магазина
+<p align="center">
+<a href="https://www.lamoda.ru/"> <img src="pictures/logo/Lamoda_logo.svg.png" width="250" height="50"> </a> </h1>
 
-![main page](pictures/main_page.png)
+---
 
-----
+### Список реализованных автотестов
 
-### Особенности проекта
+- [x] Добавление товара в корзину  
+- [x] Удаление товара из корзины
+- [x] Поиск товара по названию модели 
+- [x] Проверка товара на соответствие бренду
+- [x] Проверка товара на соответствие стоимости
+- [x] Поиск несуществующего товара  
 
-* UI и API тесты
-* Сборка проекта в Jenkins
-* Отчеты Allure Report
-* Интеграция с Allure TestOps
-* Запуск автотестов в Selenoid
+---
 
-### Список проверок, реализованных в автотестах (web)
+### Структура проекта 
+Проект реализован с использованием 
 
-- [x] Проверить, что текст "Новости"- отображается в разделе "Акционерам"
-- [x] Проверить, что текст "Признаны лучшими в разных сферах"- отображается в разделе "О банке"
-- [x] Проверить, что текст "Тарифы для бизнеса"- отображается в разделе "Бизнесу"
-- [x] Проверить, что текст "Услуги"- отображается в разделе "Кредитным организациям"
-- [x] Проверить, что текст "Предложения банка:"- отображается в разделе "Частным лицам"
-- [x] Проверить, что текст "Кому подойдет самозанятость"- отображается в разделе "Самозанятым"
-----
-### Список проверок, реализованных в автотестах (api)
-- [x] Проверить, что рубли конвертируются в евро
-- [x] Проверить, что рубли конвертируются в доллары
-- [x] Проверить, что открывается страница курсов валют
-- [x] Проверить, что открывается страница территориального расположения
-- [x] Проверить, что открывается страница выдачи персонального кредита
-### Используемый стэк
+|                                  Python                                  |                                  Pytest                                  |                                PyCharm                                 |                             Selene                              |                              Jenkins                              |                              Selenoid                               |                            Allure Report                            |                              Telegram                               |
+|:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|:----------------------------------------------------------------------:|:---------------------------------------------------------------:|:-----------------------------------------------------------------:|:-------------------------------------------------------------------:|:-------------------------------------------------------------------:|:-------------------------------------------------------------------:|
+| <img src="pictures/logo/python.svg" alt="Python" width="50" height="50"> | <img src="pictures/logo/pytest-original.svg" alt="Pytest" width="50" height="50"> | <img src="pictures/logo/PyCharm_Icon.svg" alt="Pycharm" width="50" height="50"> | <img src="pictures/logo/selene.png" alt="Selene" width="50" height="50"> | <img src="pictures/logo/Jenkins.svg" alt="Jenkins" width="50" height="50"> | <img src="pictures/logo/Selenoid.svg" alt="Selenoid" width="50" height="50"> | <img src="pictures/logo/Allure_new.png" alt="Allure" width="50" height="50"> | <img src="pictures/logo/Telegram.svg" alt="Telegram" width="50" height="50"> |
 
-<img title="Python" src="pictures/icons/python-original.svg" height="40" width="40"/> <img title="Pytest" src="pictures/icons/pytest-original.svg" height="40" width="40"/><img title="Allure Report" src="pictures/icons/Allure_Report.png" height="40" width="40"/> <img title="Allure TestOps" src="pictures/icons/AllureTestOps.png" height="40" width="40"/> <img title="GitHub" src="pictures/icons/github-original.svg" height="40" width="40"/> <img title="Selenoid" 
-src="pictures/icons/selenoid.png" height="40" width="40"/> <img title="Selenium" src="pictures/icons/selenium-original.svg" height="40" width="40"/> <img title="Selene" src="pictures/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="pictures/icons/pycharm.png" height="40" width="40"/> <img title="Jenkins" src="pictures/icons/jenkins-original.svg" height="40" width="40"/>
+---
 
-----
+### Запуск автотестов выполняется на сервере Jenkins
 
-### Локальный запуск автотестов
+#### Как запустить
 
-#### Выполнить в cli:
+###### Удаленно
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-pytest . --browser-version=100
+1. Открыть <a href="https://jenkins.autotests.cloud/job/009%20-%20hw_15_nick_lamoda/"> jenkins-control  </a>
+2. Нажать Build now
+3. Дождаться завершения 
+4. Перейти в allure отчет
+
+<img src="pictures/readme_files/jenkins_control.png" width="700" height="300"/>  
+
+###### Локально
+
+1. Клонируйте репозиторий
+```ruby
+git clone https://github.com/nxplosive/hw_9_15_lamoda.git
 ```
+2. Создайте и активируйте виртуальное окружение
+  ```ruby
+  cd hw_9_15_lamoda
+  python -m venv .venv
+  .venv/Scripts/activate
+  ```
+3. Установите зависимости с помощью pip
+  ```ruby
+  pip install -r requirements.txt
+  ```
+3. Установите  <a href="https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.26.0/allure-commandline-2.26.0.zip"> Allure </a>. Распакуйте архив в папку с проектом. Распакованную папку переименуйте в "allure"
+4. Запустите автотесты 
+  ```ruby
+  pytest tests
+  ```
+5. Получите отчёт allure командой
+  ```ruby
+allure/bin/allure.bat serve 
+  ```
+или
+  ```ruby
+allure serve tests\allure-results
+  ```
 
-#### Получение отчёта:
-```bash
-allure serve build/allure-results
-```
+---
 
-----
+### Результат запуска сборки в отчёте Allure
 
-### Проект в Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/diploma_24//">Jenkins_build</a>
+Отчёт о прохождении будет сгенерирован в allure-report с подробными шагами, скриншотами, видео.
+Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
-#### Параметры сборки
+<img src="pictures/readme_files/allure_report.png" width="700" height="300"/>  
 
-```python
-BROWSER_VERSION = 100 # Версия браузера
-ENVIRONMENT = ['PREPROD', 'PROD'] # Окружение
-COMMENT = 'some comment' # Комментарий
-```
-#### Запуск автотестов в Jenkins
-1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/diploma_24/">проект</a>
+---
 
-![jenkins project main page](pictures/jenkins_project_main_page.png)
+### Примеры выполнения тестов
 
-2. Нажать "Build with Parameters"
-3. В поле "BROWSER_VERSION" ввести: 100
-4. Из списка "ENVIRONMENT" выбрать: PROD
-5. Нажать "Build"
+<img src="pictures/readme_files/test_add_to_cart.gif" width="700"/>  
+<img src="pictures/readme_files/test_remove_from_cart.gif" width="700"/>  
 
-![jenkins_build](pictures/jenkins_build.png)
+---
 
-----
-
-### Allure отчет
-#### Общие результаты 
-![allure_report_overview](pictures/allure_report_overview.png)
-
-#### Результаты прохождения теста
-![allure_reports_behaviors](pictures/allure_reports_behaviors.png)
-
-#### Диаграммы
-
-![allure_reports_graphs](pictures/alluere_reports_graphs_1.png)
-
-
-----
-
-### Интеграция с Allure TestOps
-> <a target="_blank" href="https://allure.autotests.cloud/project/4117/dashboards">Ссылка на проект</a>
-
-#### Общий Дашборд
-
-![allure_test_ops_dashboards](pictures/allure_testops_launches.png)
-
-#### История запуска тестов
-
-![allure_testops_launches](pictures/allure_testops_dashboards.png)
-
-#### Тест кейсы
-
-![allure_testops_suites](pictures/allure_testops_suites.png)
-
-
-
-----
-
-
-
-### Видео прохождения одного из автотеста
-![autotest_gif](pictures/autotest.gif)
-
-----
+### Настроено автоматическое оповещение о результатах в Telegram
+<p align="center">
+<img src="pictures/readme_files/tg_screen.png" width="300" height="300"/>
 
