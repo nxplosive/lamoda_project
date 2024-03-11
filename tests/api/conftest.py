@@ -1,4 +1,12 @@
 import pytest
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+user_email = os.getenv('USER_EMAIL')
+user_password = os.getenv('USER_PASSWORD')
+invalid_password = os.getenv('UNREGISTERED_USER_PASSWORD')
+header = {"Content-Type": "application/json"}
 
 
 @pytest.fixture

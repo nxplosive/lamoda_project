@@ -12,7 +12,6 @@ from allure_commons._allure import step
 def test_cart_item(base_url):
     with step("Добавление товара в корзину"):
         url = f'{base_url}cart/add'
-
     price = 1330
     payload = json.dumps({
         "sku": "RTLACZ076501NS00",

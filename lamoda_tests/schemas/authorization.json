@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_verified": {
+      "type": "boolean"
+    },
+    "phone_verified_time": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "first_name",
+    "id",
+    "phone",
+    "phone_verified",
+    "phone_verified_time"
+  ]
+}
