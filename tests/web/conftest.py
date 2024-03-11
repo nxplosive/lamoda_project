@@ -19,19 +19,12 @@ def load_env():
 def browser_settings():
     config = Settings()
     options = Options()
+
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--incognito')
-    selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": "100.0",
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
-    options.capabilities.update(selenoid_capabilities)
+
     driver_options = webdriver.ChromeOptions()
 
     if config.remote:
