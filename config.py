@@ -7,11 +7,3 @@ class Settings(BaseSettings):
     base_url: str = 'https://www.lamoda.ru'
     remote: bool = False
     page_load_strategy: str = 'normal'
-    selenoid_capabilities: dict = {
-        "browserName": "chrome",
-        "browserVersion": "100.0",
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
