@@ -1,17 +1,38 @@
 <h1 align="center">Проект по тестированию интернет-магазина
+
+---
+
 <p align="center">
 <a href="https://www.lamoda.ru/"> <img src="pictures/logo/Lamoda_logo.svg.png" width="250" height="50"> </a> </h1>
 
 ---
 
-### Список реализованных автотестов
+### Особенности проекта
+
+* UI и API тесты
+* Сборка проекта в Jenkins
+* Отчеты Allure Report
+* Интеграция с Allure TestOps
+* Запуск автотестов в Selenoid
+
+---
+
+### Список реализованных автотестов (web)
 
 - [x] Добавление товара в корзину  
 - [x] Удаление товара из корзины
 - [x] Поиск товара по названию модели 
 - [x] Проверка товара на соответствие бренду
 - [x] Проверка товара на соответствие стоимости
-- [x] Поиск несуществующего товара  
+- [x] Поиск несуществующего товара
+
+### Список реализованных автотестов (api)
+
+- [x] Добавление товара в корзину  
+- [x] Удаление товара из корзины
+- [x] Проверка выбора геолокации  
+- [x] Авторизация зарегистрированого пользователя
+- [x] Авторизация несуществующего пользователя
 
 ---
 
@@ -30,7 +51,7 @@
 
 ###### Удаленно
 
-1. Открыть <a href="https://jenkins.autotests.cloud/job/009%20-%20hw_15_nick_lamoda/"> jenkins-control  </a>
+1. Открыть <a href="https://jenkins.autotests.cloud/job/009%20-%20lamoda_project/"> jenkins-control  </a>
 2. Нажать Build now
 3. Дождаться завершения 
 4. Перейти в allure отчет
@@ -74,7 +95,34 @@ allure serve tests\allure-results
 Отчёт о прохождении будет сгенерирован в allure-report с подробными шагами, скриншотами, видео.
 Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
-<img src="pictures/readme_files/allure_report.png" width="700" height="300"/>  
+----
+
+#### Общие результаты 
+![allure_report_overview](pictures/allure_report_overview.png)
+
+#### Результаты прохождения теста
+![allure_reports_behaviors](pictures/allure_reports_behaviors.png)
+
+#### Диаграммы
+
+![allure_reports_graphs](pictures/alluere_reports_graphs_1.png)
+
+----
+
+### Интеграция с Allure TestOps
+> <a target="_blank" href="https://allure.autotests.cloud/project/4117/dashboards">Ссылка на проект</a>
+
+#### Общий Дашборд
+
+![allure_test_ops_dashboards](pictures/allure_testops_launches.png)
+
+#### История запуска тестов
+
+![allure_testops_launches](pictures/allure_testops_dashboards.png)
+
+#### Тест кейсы
+
+![allure_testops_suites](pictures/allure_testops_suites.png)
 
 ---
 

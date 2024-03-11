@@ -13,7 +13,7 @@ class Card:
 card = Card(
     card_name='Кроссовки GALAXY STAR M',
     brand_name='adidas',
-    card_price='5 600 ₽',
+    card_price='6 300 ₽',
     item_name='Кроссовки adidas\n38 RUS (6 UK)\nСерый',
 not_exist_data = 'j23hfg554'
 )
