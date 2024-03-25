@@ -5,7 +5,7 @@ import requests
 from jsonschema import validate
 
 from lamoda_tests.utils.schemas_path import load_schema
-from tests.api.conftest import user_email, user_password, invalid_password, header
+from tests.api.conftest import user_email, user_password, invalid_password
 
 
 @allure.epic('API. Authorized')
@@ -19,7 +19,7 @@ from tests.api.conftest import user_email, user_password, invalid_password, head
 def test_authorization_registered_user(base_url):
     with allure.step('Успешная авторизация'):
         url = f"{base_url}customer/get"
-    headers = {
+    head = {
         'Accept': 'application/json, text/plain, */*',
         'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
         'Connection': 'keep-alive',
@@ -34,9 +34,8 @@ def test_authorization_registered_user(base_url):
         'sec-ch-ua-platform': '"Windows"',
         'sec-gpc': '1'
     }
-    response = requests.request("GET", url, json={"login": user_email, "password": user_password}, headers=headers)
+    response = requests.request("GET", url, json={"login": user_email, "password": user_password}, headers=head)
     body = response.json()
-
     with allure.step('Статус код = 200'):
         assert response.status_code == 200
 

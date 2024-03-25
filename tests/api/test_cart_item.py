@@ -27,7 +27,7 @@ def test_cart_item(base_url):
         },
         "item_selection_enabled": True
     })
-    headers = {
+    head = {
         'Accept': 'application/json, text/plain, */*',
         'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
         'Connection': 'keep-alive',
@@ -44,8 +44,7 @@ def test_cart_item(base_url):
         'sec-ch-ua-platform': '"Windows"',
         'sec-gpc': '1'
     }
-
-    response = requests.request("POST", url, headers=headers, data=payload)
+    response = requests.request("POST", url, headers=head, data=payload)
     body = response.json()
     with allure.step('Статус код = 200'):
         assert response.status_code == 200

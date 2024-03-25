@@ -2,7 +2,7 @@ import allure
 import pytest
 
 from lamoda_tests.data.data_cards import card
-from lamoda_tests.pages.main_page import MainPage
+from lamoda_tests.pages.ui.main_page import MainPage
 
 
 @pytest.fixture()
