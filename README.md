@@ -56,7 +56,7 @@
 3. Дождаться завершения 
 4. Перейти в allure отчет
 
-<img src="pictures/readme_files/jenkins_control.png" width="700" height="300"/>  
+![allure_report_overview](pictures/readme_files/jenkins_control.png)
 
 ###### Локально
 
